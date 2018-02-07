@@ -72,28 +72,7 @@ def makeWebhookResult(req):
                 #"contextOut": [],
                 "source": "Complaint_status.Complaint_status-custom"
               }
-        #START THE VOD MODULE
-    if req.get("result").get("action") == "VOD.VOD-custom":
-        result = req.get("result")
-        parameters = result.get("parameters")
-        zone = parameters.get("Users")
-        
-        type = {'The Breaking Bad':'TV Series', 'The Walking Dead':'TV Series', 'Game of Thrones':'TV Series', 'Friends':'TV Series', 'Quantico':'TV Series', 'The Flash':'TV Series', 'The Arrow':'TV Series', 'The Mentalist':'TV Series', 'Dexter':'TV Series', 'Avengers':'Movie', 'Captain America':'Movie', 'Train to Bussan':'Movie', 'Terminator':'Movie', 'Jumanji':'Movie', 'Twelve Rounds':'Movie', 'Marine':'Movie'}
-        genre = {'The Breaking Bad':'Crime, Drama, Thriller', 'The Walking Dead':'Horror, Zombie Appocolipse', 'Game of Thrones':'Fantesy, Drama', 'Friends':'Comedy, Romance', 'Quantico':'Crime, Thriller', 'The Flash':'Superhero, Action, Drama', 'The Arrow':'Superhero, Action, Drama', 'The Mentalist':'Mystery, Drama', 'Dexter':'Crime, Psycological Thriller, Mystery', 'Avengers':'Superhero, Action, Science, Adventure', 'Captain America':'Action, Science, Superhero, Adventure', 'Train to Bussan':'Horror', 'Terminator':'Fantesy, Science', 'Jumanji':'Adventure, Thriller', 'Twelve Rounds':'Crime, Thriller', 'Marine':'Crime, Mystery'}
-        certification = {'The Breaking Bad':'PG16', 'The Walking Dead':'PG18', 'Game of Thrones':'18+', 'Friends':'Universal', 'Quantico':'PG16', 'The Flash':'Universal', 'The Arrow':'Universal', 'The Mentalist':'Universal', 'Dexter':'18+', 'Avengers':'Universal', 'Captain America':'Universal', 'Train to Bussan':'PG16', 'Terminator':'Universal', 'Jumanji':'Universal', 'Twelve Rounds':'PG16', 'Marine':'PG16'}
-        price = {'The Breaking Bad':'$20', 'The Walking Dead':'$35', 'Game of Thrones':'$60', 'Friends':'$15', 'Quantico':'FREE', 'The Flash':'$35', 'The Arrow':'$30', 'The Mentalist':'$40', 'Dexter':'$50', 'Avengers':'$40', 'Captain America':'$35', 'Train to Bussan':'$15', 'Terminator':'FREE', 'Jumanji':'FREE', 'Twelve Rounds':'FREE', 'Marine':'FREE'}
-        rating = {'The Breaking Bad':'9.5/10 IMDB', 'The Walking Dead':'8.4/10 IMDB', 'Game of Thrones':'9.6/10 IMDB', 'Friends':'8.9/10 IMDB', 'Quantico':'7.5/10 IMDB', 'The Flash':'8/10 IMDB', 'The Arrow':'7.8/10 IMDB', 'The Mentalist':'8.1/10 IMDB', 'Dexter':'8.7/10 IMDB+', 'Avengers':'8.1/10 IMDB', 'Captain America':'7.4/10 IMDB', 'Train to Bussan':'7.5/10 IMDB', 'Terminator':'8/10 IMDB', 'Jumanji':'7.2/10 IMDB', 'Twelve Rounds':'6.5/10 IMDB', 'Marine':'7.5/10 IMDB'}
-        
-        speech = "Thank you for enquiring about the Cricket VOD service! Your Request: " + zone + " \n Type: " + str(type[zone]) + " \n Genre: " + str(genre[zone]) + " \n Certification: " + str(certification[zone]) + " \n Rating: " + str(rating[zone]) + " \n Price: " + str(price[zone])
-        print("Response:")
-        print(speech)
-        return{
-                "speech": speech,
-                "displayText": speech,
-                #"data": {},
-                #"contextOut": [],
-                "source": "VOD.VOD-custom"
-              }
+      
     
     
         
