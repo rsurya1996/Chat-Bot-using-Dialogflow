@@ -73,7 +73,7 @@ def makeWebhookResult(req):
                 "source": "Complaint_status.Complaint_status-custom"
               }
         #START THE VOD MODULE
-    elif req.get("result").get("action") == "VOD.VOD-custom":
+    if req.get("result").get("action") == "VOD.VOD-custom":
         result = req.get("result")
         parameters = result.get("parameters")
         zone = parameters.get("Users")
