@@ -38,7 +38,7 @@ def makeWebhookResult(req):
         csv_file = csv.reader(open('users.csv'), delimiter=",")
        
         for row in csv_file:    
-            if zone == row[1]:
+            if zone == row[0]:
                 speech = ("\n\nHi " + row[1] + " you are enrolled under the " + row[2] + " with " + row[3])
         
         print(speech)
