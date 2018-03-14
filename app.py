@@ -64,7 +64,7 @@ def makeWebhookResult(req):
         csv_file = csv.reader(open('complaint.csv'), delimiter=",")
        
         for row in csv_file:    
-            if zone == row[1]:
+            if zone == row[0]:
                 speech = ("\n\nHi " + row[1] + "\nyour complaint id: " + row[2] + "\nType of complaint: " + row[3] + "\nComment: " + row[4] + "\nStatus: " + row[5])
         
         
@@ -88,7 +88,7 @@ def makeWebhookResult(req):
         csv_file = csv.reader(open('complaint.csv'), delimiter=",")
        
         for row in csv_file:    
-            if str(zone) == row[1]:
+            if str(zone) == row[2]:
                 speech = ("\n\nHi " + row[1] + "\nyour complaint id: " + row[2] + "\nType of complaint: " + row[3] + "\nComment: " + row[4] + "\nStatus: " + row[5])
         
         
